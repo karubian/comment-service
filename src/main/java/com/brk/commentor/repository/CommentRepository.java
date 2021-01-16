@@ -1,8 +1,8 @@
 package com.brk.commentor.repository;
 
 import com.brk.commentor.model.Comment;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CommentRepository extends PagingAndSortingRepository<Comment, Long> {
+public interface CommentRepository extends JpaRepository<Comment, Long> {
 
 }

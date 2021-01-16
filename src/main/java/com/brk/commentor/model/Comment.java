@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.*;
-
 @Data
 @Entity
 @ToString
@@ -14,8 +13,16 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long comment_id;
 
+    private String title;
+
     private String content;
 
-    @OneToOne
-    private User user;
+    public Comment(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    public Comment() {
+
+    }
 }
